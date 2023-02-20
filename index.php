@@ -52,6 +52,25 @@ $hotels = [
         <title>PHP Hotel</title>
     </head>
     <body>
-        
+        <div>
+
+        <!-- Ciclo -->
+            <?php foreach($hotels as $hotel): ?>
+                <h3><?php echo $hotel['name']; ?></h3>
+                <h5><?php echo $hotel['description']; ?></h5>
+                <p>Parcheggio 
+                    <?php if ($hotel['parking'] == true){
+                        echo "disponibile";
+                    }
+                    else{
+                        echo "NON disponibile";
+                    }
+                    ?>
+                </p>
+                <p>Voto: <?php echo $hotel['vote']; ?>/5 stelle </p>
+                <p>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?>km</p>
+            <?php endforeach; ?>
+            
+        </div>
     </body>
-</html>
+</html> 
