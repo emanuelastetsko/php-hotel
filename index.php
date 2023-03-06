@@ -1,6 +1,6 @@
 <?php 
 
-// Array con la lista degli hotel 
+// Array multidimensionale con la lista degli hotel 
 $hotels = [
 
     [
@@ -69,9 +69,16 @@ $hotels = [
 
                 <!-- Inizio ciclo -->
                 <?php foreach($hotels as $hotel): ?>
+                    
                 <tr>
+
+                    <!-- Stampa del valore di hotel con chiave "name" -->
                     <td><?php echo $hotel['name']; ?></td>
+
+                    <!-- Stampa del valore di hotel con chiave "description" -->
                     <td><?php echo $hotel['description']; ?></td>
+
+                    <!-- If che verifica se il valore booleano della chiave "parking è true oppure false -->
                     <td>
                         <?php if ($hotel['parking'] == true){
                             echo "Si";
@@ -81,9 +88,15 @@ $hotels = [
                         }
                         ?>
                     </td>
+
+                    <!-- Stampa del valore di hotel con chiave "vote" -->
                     <td><?php echo $hotel['vote']; ?>/5 stelle </td>
+
+                    <!-- Stampa del valore di hotel con chiave "distance_to_center" -->
                     <td><?php echo $hotel['distance_to_center']; ?>km</td>
+
                 </tr>
+
                 <!-- Fine ciclo -->
                 <?php endforeach; ?>
 
