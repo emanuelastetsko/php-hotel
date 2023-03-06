@@ -103,7 +103,11 @@ foreach ($hotels as $hotel) {
     </head>
     <body>
         <header>
+
+            <!-- Form per richiesta dei dati -->
             <form action="" method="GET">
+
+                <!-- Sezione per filtrare per presenza o meno del parcheggio -->
                 <div class="m-2 pt-2">
                     <label for="parking-input" class="form-label">Parcheggio in struttura</label>
                     <select name="parking" id="parking-input" class="form-select">
@@ -112,6 +116,8 @@ foreach ($hotels as $hotel) {
                         <option value="0">No</option>
                     </select>
                 </div>
+
+                <!-- Sezione per filtrare per valutazione -->
                 <div class="m-2 pt-2">
                     <label for="vote-input" class="form-label">Valutazione</label>
                     <select name="vote" id="vote-input" class="form-select">
@@ -123,8 +129,11 @@ foreach ($hotels as $hotel) {
                         <option value="1">1</option>
                     </select>
                 </div>
+
+                <!-- Bottone per l'invio dei dati -->
                 <button type="submit" class="mb-2 mx-2 btn btn-dark">Filtra</button>
             </form>
+
         </header>
         <main>
             <table class="table">
